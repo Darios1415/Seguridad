@@ -12,6 +12,23 @@ class Authenticate extends Middleware
      * @param  \Illuminate\Http\Request  $request
      * @return string|null
      */
+    
+    public function authorize()
+    {
+        return true;
+    }
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        return [
+            'g-recaptcha-response' => 'recaptcha',
+        ];
+    }
+    
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {

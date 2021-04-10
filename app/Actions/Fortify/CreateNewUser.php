@@ -9,6 +9,7 @@ use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
 use Illuminate\Support\Facades\Log;
 
+
 class CreateNewUser implements CreatesNewUsers
 {
     use PasswordValidationRules;
